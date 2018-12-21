@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>QRcode - Temblete</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+    .card-img {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .card-text {
+        font-family: 11px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 240px;
+        margin: 20px;
+        border-radius: 20px;
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+</style>
+
+<body>
+    <% users.forEach(function(user){ %>
+    <div class="card">
+        <img class="card-img" src=<%=user.qrcode %> alt="qrcode-image">
+        <p class="card-text">
+            <b>Nome: </b>
+            <%= user.name %><br>
+            <b>E-mail: </b>
+            <%= user.email %>
+        </p>
+    </div>
+    <% }) %>
+</body>
+
+</html>

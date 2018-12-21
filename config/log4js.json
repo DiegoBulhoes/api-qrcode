@@ -1,0 +1,46 @@
+{
+  "appenders": {
+    "app": {
+      "type": "file",
+      "filename": "log/app.log",
+      "maxLogSize": 500000000, 
+      "numBackups": 3
+    },
+    "errorFile": {
+      "type": "file",
+      "filename": "log/errors.log"
+    },
+    "errors": {
+      "type": "logLevelFilter",
+      "level": "ERROR",
+      "appender": "errorFile"
+    },
+    "infoFile": {
+      "type": "file",
+      "filename": "log/info.log"
+    },
+    "info": {
+      "type": "logLevelFilter",
+      "level": "INFO",
+      "appender": "infoFile"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "app",
+        "errors",
+        "info"
+      ],
+      "level": "DEBUG"
+    },
+    "testUnit": {
+      "appenders": [
+        "app",
+        "errors",
+        "info"
+      ],
+      "level": "DEBUG"
+    }
+  }
+}
