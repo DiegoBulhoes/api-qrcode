@@ -6,9 +6,6 @@ describe('Controllers: csv', () => {
   log4js.configure(`${__dirname}/../../../config/log4js.json`);
 
   describe('Convert file.csv to an object: createJson()', () => {
-    const next = function error(err) {
-      return err;
-    };
     const filename = 'testeUnit.csv';
 
     it('Should return a json', async () => {
