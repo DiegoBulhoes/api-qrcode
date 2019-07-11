@@ -1,4 +1,4 @@
---require babel-core/register
+--require @babel/register
 --require test/integration/helpers.js
 --require test/unit/helpers.js
 --reporter spec
