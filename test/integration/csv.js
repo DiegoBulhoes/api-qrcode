@@ -4,7 +4,7 @@ describe('Test integration of csv routes', () => {
       const filePath = `${__dirname}/../auxiliaryFiles/file.csv`;
       return request
         .post('/v1/csv')
-        .field('templateName', 'list')
+        .field('templateName', 'LeftQRCodeList')
         .attach('file', filePath)
         .expect(200);
     });

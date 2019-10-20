@@ -16,7 +16,7 @@ describe('Controllers: file', () => {
     }];
 
     it('Should return a html', async () => {
-      const response = await fileController.createHtmlFile(filename, logger, json, `${__dirname}/../../../template/list.ejs`, 'utf8');
+      const response = await fileController.createHtmlFile(filename, logger, json, `${__dirname}/../../../template/LeftQRCodeList.ejs`, 'utf8');
       const html = fs.readFileSync(`${__dirname}/../../auxiliaryFiles/file.html`, 'utf8');
       return expect(response).to.be.eql(html);
     });
