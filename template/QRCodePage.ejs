@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>QRcode - Temblete</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+    .card-img {
+        margin-top: 150px;
+        width: 400px;
+        margin-top: 5px;
+    }
+
+    .card-text {
+        font-size: 18px;
+    }
+
+    .card {
+        page-break-inside: always;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <% jsonSet.forEach(function(json){ %>
+    <div class="card">
+        <img class="card-img" src=<%=json.qrcode %> alt="qrcode-image">
+        <p class="card-text">
+            <b><%= json.mode %>: </b>
+            <%= json.name %><br>
+            <b>Data: </b>
+            <%= json.date %><br>
+            <b>Horario: </b>
+            <%= json.schedule %><br>
+        </p>
+    </div>
+    <% }) %>
+</body>
+
+</html>
