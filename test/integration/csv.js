@@ -1,12 +1,13 @@
 describe('Test integration of csv routes', () => {
   describe('POST /v1/csv', () => {
-    it('Must perform a req and return a status Code = 200', async () => {
+    it('Must perform a req and return a status Code = 200', (done) => {
       const filePath = `${__dirname}/../auxiliaryFiles/file.csv`;
-      return request
+      request
         .post('/v1/csv')
         .field('templateName', 'LeftQRCodeList')
         .attach('file', filePath)
         .expect(200);
+      done();
     });
 
     it('Must perform a req and return a status Code = 500', async () => {

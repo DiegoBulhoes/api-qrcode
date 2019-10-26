@@ -30,14 +30,14 @@
 </style>
 
 <body>
-    <% users.forEach(function(user){ %>
+    <% jsonSet.forEach(function(json){ %>
     <div class="card">
-        <img class="card-img" src=<%=user.qrcode %> alt="qrcode-image">
+        <img class="card-img" src=<%=json.qrcode %> alt="qrcode-image">
         <p class="card-text">
             <b>Nome: </b>
-            <%= user.name %><br>
+            <%= json.name %><br>
             <b>E-mail: </b>
-            <%= user.email %>
+            <%= json.email %>
         </p>
     </div>
     <% }) %>
