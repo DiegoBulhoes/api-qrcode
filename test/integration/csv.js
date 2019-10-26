@@ -1,6 +1,6 @@
 describe('Test integration of csv routes', () => {
   describe('POST /v1/csv', () => {
-    it('Must perform a req and return a status Code = 200', async () => {
+    it('Must perform a req and return a status Code = 200', () => {
       const filePath = `${__dirname}/../auxiliaryFiles/file.csv`;
       return request
         .post('/v1/csv')
