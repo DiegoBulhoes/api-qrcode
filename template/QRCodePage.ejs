@@ -8,23 +8,18 @@
 
 <style>
     .card-img {
-        width: 120px;
+        margin-top: 150px;
+        width: 400px;
+        margin-top: 5px;
     }
 
     .card-text {
-        padding-top: 40px;
-        font-size: 10px;
-    }
-
-    img {
-        float: left;
+        font-size: 18px;
     }
 
     .card {
-        width: 350px;
-        height: 160px;
-        margin: 20px;
-        page-break-inside: avoid;
+        page-break-inside: always;
+        text-align: center;
     }
 </style>
 
@@ -33,10 +28,12 @@
     <div class="card">
         <img class="card-img" src=<%=json.qrcode %> alt="qrcode-image">
         <p class="card-text">
-            <b>Nome: </b>
+            <b><%= json.mode %>: </b>
             <%= json.name %><br>
-            <b>E-mail: </b>
-            <%= json.email %>
+            <b>Data: </b>
+            <%= json.date %><br>
+            <b>Horario: </b>
+            <%= json.schedule %><br>
         </p>
     </div>
     <% }) %>
