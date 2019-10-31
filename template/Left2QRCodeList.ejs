@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QR code inscritos</title>
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" type="image/x-icon" href="logo.png">
+	<style type="text/css">
+		*{margin: 0px;padding: 0px;}
+
+		p{
+			font-size: 10px;
+			margin-top: 30px;
+		}
+		b{
+			font-size: 10px;
+		} 
+
+		body{
+			font-family:arial, helvetica, sans-serif;
+		}
+
+		.card{
+			width: 50%;
+			height: 120px;
+			float: left;
+			background: white;
+		}
+
+		.card img{
+			height: 100px;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>		    
+		<div class="conteudo">
+			<% jsonSet.forEach(function(json){ %>
+			    <div class="card">
+			        <img  src=<%=json.qrcode %> alt="qrcode-image">
+			        <p>
+			            <b>Nome: </b>
+			            <%= json.name %><br>
+			            <b>E-mail: </b>
+			            <%= json.email %>
+			        </p>
+			    </div>
+			<% }) %>
+		</div>
+</body>
+</html>
